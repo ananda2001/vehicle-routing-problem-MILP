@@ -398,5 +398,5 @@ class RouteVisualizer:
 
         plt.tight_layout()
         plt.savefig(save_path, dpi=150, bbox_inches='tight')
-        print(f"✓ Schedule timeline plot saved to: {save_path}")
+        print(f"Success!!! Schedule timeline plot saved to: {save_path}")
         plt.close()
