@@ -7,10 +7,10 @@ The model includes capacity constraints and SOFT time window constraints.
 Mathematical Formulation:
 ------------------------
 Decision Variables:
-    a[i,j] \in {0,1}: Binary variable = 1 if vehicle travels from node i to node j
+    a[i,j] \in {0,1}: Binary variable = 1 if vehicle travels from node i to node j, i \neq j
     s[i] >= 0: Continuous variable representing service start time at customer i
     y[i] >= 0: Continuous variable representing cumulative load before serving customer i
-    slack[i] >= 0: Slack variable for time window violations (lateness beyond preferred window)
+    slack[i] >= 0: Slack variable for time window violations (lateness beyond preferred window) for customer i
 
 Objective:
     Minimize: (sum_i) (sum_j \neq i) distance[i,j] * x[i,j] + penalty_weight * (Sum_i) slack[i]
